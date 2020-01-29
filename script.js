@@ -133,6 +133,13 @@ $(document).ready(function() {
 		} */
 	}
 
+	function handler(event) {
+		var target = $(event.target);
+		if (target.is('p')) {
+			target.children().text();
+		}
+	}
+
 	// Event listener for Start Button
 	startBtn.on('click', function() {
 		event.preventDefault();
@@ -140,7 +147,13 @@ $(document).ready(function() {
 		emptyDiv();
 		initialQuestion();
 
-		console.log('score');
+		// console.log('score');
+	});
+
+	cardTextEl.on('click', function() {
+		var response = $('.card-body p').text();
+
+		console.log(response);
 	});
 
 	// Event listener for viewing highscores
