@@ -44,9 +44,9 @@ $(document).ready(function() {
 		}
 	];
 
-	let counter = quiz.length;
+	let counter = quiz.length - 1;
 
-	console.log(quiz);
+	// console.log(counter);
 	// Function declarations
 
 	function startScreen() {
@@ -109,6 +109,17 @@ $(document).ready(function() {
 		  */
 	}
 
+	function initialQuestion() {
+		cardTitleEl.text(quiz[counter].question);
+
+		var a = $('<p></p>').text('A. ' + quiz[counter].answers[0]);
+		var b = $('<p></p>').text('B. ' + quiz[counter].answers[1]);
+		var c = $('<p></p>').text('C. ' + quiz[counter].answers[2]);
+		var d = $('<p></p>').text('D. ' + quiz[counter].answers[3]);
+
+		cardTextEl.append(a, b, c, d);
+	}
+
 	function nextQuestion() {
 		/* counter--;
 		
@@ -126,6 +137,8 @@ $(document).ready(function() {
 	startBtn.on('click', function() {
 		event.preventDefault();
 		setTime();
+		emptyDiv();
+		initialQuestion();
 
 		console.log('score');
 	});
