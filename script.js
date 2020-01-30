@@ -11,7 +11,7 @@ $(document).ready(function() {
 		'The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.';
 	const startBtnText = 'Start Quiz';
 	let secondsLeft = 76;
-
+	let score = [];
 	let quiz = [
 		{
 			question: 'Commonly used data types DO NOT include:',
@@ -83,30 +83,25 @@ $(document).ready(function() {
 		console.log(score);
 	}
 
-	function rightAnswers() {
+	function answerResponse() {
+		/* get the text from the answer choice the user clicked &
+			compare it to the list of correct answers */
 		var correctAnswers = [];
 
 		for (i = 0; i < quiz.length; i++) {
 			correctAnswers.push(quiz[i].correct);
 		}
 
-		return correctAnswers;
-	}
+		var choice = correctAnswers.includes(handler(event));
 
-	function answerResponse() {
-		/* get the text from the answer choice the user clicked
-			var answerChoice = (selector).text
-			&
-			compare it to the list of correct answers
-			
-			var choice = correctAnswers.includes(answerChoice);
-		  
-		  if (choice === true) {
-			print 'Correct!'
-			} else {
-			print 'Wrong!'
-			}
-		  */
+		if (choice === true) {
+			cardBodyEl.append('<h6>"Correct!"</h6>');
+			score.push(secondsLeft);
+		} else {
+			cardBodyEl.append('<h6>"Wrong!"</h6>');
+			score.push(secondsLeft - 75);
+		}
+		console.log(score);
 	}
 
 	function initialQuestion() {
@@ -135,9 +130,12 @@ $(document).ready(function() {
 
 	function handler(event) {
 		var target = $(event.target);
+		var answerChoice;
 		if (target.is('p')) {
-			target.children().text();
+			answerChoice = target.text().slice(3);
+			return answerChoice;
 		}
+		// return answerChoice;
 	}
 
 	// Event listener for Start Button
@@ -151,9 +149,9 @@ $(document).ready(function() {
 	});
 
 	cardTextEl.on('click', function() {
-		var response = $('.card-body p').text();
-
-		console.log(response);
+		event.preventDefault();
+		handler(event);
+		answerResponse();
 	});
 
 	// Event listener for viewing highscores
