@@ -4,10 +4,10 @@ $(document).ready(function() {
 	const timerEl = $('#timer');
 	const cardBodyEl = $('.card-body');
 	const cardTitleEl = $('.card-body h5');
-	const cardInstuctionsEl = $('#instructions');
+	const cardInstuctionsEl = $('.card-body #instructions');
+	console.log(cardInstuctionsEl);
 	const cardTextEl = $('.card-text');
 	const btnDiv = $('div.btn-div');
-	console.log(btnDiv);
 	const startBtn = $('.card-body .btn');
 	const cardInstructions =
 		'The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.';
@@ -102,7 +102,7 @@ $(document).ready(function() {
 
 			cardTextEl.append(a, b, c, d);
 		} else {
-			//   resultsPage();
+			resultsPage();
 		}
 	}
 
@@ -124,15 +124,21 @@ $(document).ready(function() {
 			score.push(secondsLeft);
 			emptyDiv();
 			nextQuestion();
-			// btnDiv.empty();
 		} else {
 			btnDiv.append(wrong);
 			score.push(secondsLeft - 75);
 			emptyDiv();
-			// cardBtnSpan.empty(wrong);
 			nextQuestion();
 		}
 		console.log(score);
+	}
+
+	function resultsPage() {
+		let finalScore = score.reduce((a, b) => a + b, 0);
+		let scoreText = 'Your score is ' + finalScore + '!';
+		cardTitleEl.html('<h5>All done!</h5>');
+		cardTextEl.html('<h6></h6>').text('Your score is ' + finalScore + '!');
+		// var inputDiv = $('<div><div>').addClass()
 	}
 
 	function handler(event) {
@@ -151,8 +157,6 @@ $(document).ready(function() {
 		setTime();
 		emptyDiv();
 		initialQuestion();
-
-		// console.log('score');
 	});
 
 	cardTextEl.on('click', function() {

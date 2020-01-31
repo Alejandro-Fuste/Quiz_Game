@@ -84,13 +84,17 @@ p {
 	z-index: 3;
 }
 
+div .card-body {
+	height: 50%;
+}
+
 .card-title {
 	font-size: 2vw;
 	line-height: 1.5;
 	font-family: 'Oswald', sans-serif;
 }
 
-h6 {
+#instructions {
 	font-family: 'Arimo', sans-serif;
 	font-size: 2.0vw;
 }
