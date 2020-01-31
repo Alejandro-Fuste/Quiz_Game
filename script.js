@@ -6,8 +6,8 @@ $(document).ready(function() {
 	const cardTitleEl = $('.card-body h5');
 	const cardInstuctionsEl = $('#instructions');
 	const cardTextEl = $('.card-text');
-	const cardBtnDiv = $('.card-body btn-div span button');
-	console.log(cardBtnDiv);
+	const btnDiv = $('div.btn-div');
+	console.log(btnDiv);
 	const startBtn = $('.card-body .btn');
 	const cardInstructions =
 		'The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.';
@@ -46,9 +46,9 @@ $(document).ready(function() {
 		}
 	];
 
-	let counter = quiz.length - 1;
+	let counter = 0;
 
-	// console.log(counter);
+	console.log(quiz.length);
 	// Function declarations
 
 	function startScreen() {
@@ -78,6 +78,34 @@ $(document).ready(function() {
 		}, 1000);
 	}
 
+	function initialQuestion() {
+		cardTitleEl.text(quiz[counter].question);
+
+		var a = $('<p></p>').text('A. ' + quiz[counter].answers[0]);
+		var b = $('<p></p>').text('B. ' + quiz[counter].answers[1]);
+		var c = $('<p></p>').text('C. ' + quiz[counter].answers[2]);
+		var d = $('<p></p>').text('D. ' + quiz[counter].answers[3]);
+
+		cardTextEl.append(a, b, c, d);
+	}
+
+	function nextQuestion() {
+		counter++;
+
+		if (counter < quiz.length) {
+			cardTitleEl.text(quiz[counter].question);
+
+			var a = $('<p></p>').text('A. ' + quiz[counter].answers[0]);
+			var b = $('<p></p>').text('B. ' + quiz[counter].answers[1]);
+			var c = $('<p></p>').text('C. ' + quiz[counter].answers[2]);
+			var d = $('<p></p>').text('D. ' + quiz[counter].answers[3]);
+
+			cardTextEl.append(a, b, c, d);
+		} else {
+			//   resultsPage();
+		}
+	}
+
 	function answerResponse() {
 		/* get the text from the answer choice the user clicked &
 			compare it to the list of correct answers */
@@ -92,46 +120,19 @@ $(document).ready(function() {
 		var wrong = '<h6>"Wrong!"</h6>';
 
 		if (choice === true) {
-			cardBtnDiv.append(right);
+			btnDiv.append(right);
 			score.push(secondsLeft);
 			emptyDiv();
 			nextQuestion();
+			// btnDiv.empty();
 		} else {
-			cardBtnSpan.append(wrong);
+			btnDiv.append(wrong);
 			score.push(secondsLeft - 75);
 			emptyDiv();
 			// cardBtnSpan.empty(wrong);
 			nextQuestion();
 		}
 		console.log(score);
-	}
-
-	function initialQuestion() {
-		cardTitleEl.text(quiz[counter].question);
-
-		var a = $('<p></p>').text('A. ' + quiz[counter].answers[0]);
-		var b = $('<p></p>').text('B. ' + quiz[counter].answers[1]);
-		var c = $('<p></p>').text('C. ' + quiz[counter].answers[2]);
-		var d = $('<p></p>').text('D. ' + quiz[counter].answers[3]);
-
-		cardTextEl.append(a, b, c, d);
-	}
-
-	function nextQuestion() {
-		counter--;
-
-		if (counter > 0) {
-			cardTitleEl.text(quiz[counter].question);
-
-			var a = $('<p></p>').text('A. ' + quiz[counter].answers[0]);
-			var b = $('<p></p>').text('B. ' + quiz[counter].answers[1]);
-			var c = $('<p></p>').text('C. ' + quiz[counter].answers[2]);
-			var d = $('<p></p>').text('D. ' + quiz[counter].answers[3]);
-
-			cardTextEl.append(a, b, c, d);
-		} else {
-			//   resultsPage();
-		}
 	}
 
 	function handler(event) {
