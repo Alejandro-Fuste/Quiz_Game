@@ -1,12 +1,11 @@
 * {
 	margin: 0px;
-	box-sizing: border-box;
 }
 
 html,
 body {
 	/* box-sizing: border-box; */
-	/* position: relative; */
+	position: relative;
 	height: 100%;
 	width: 100%;
 	background-image: url("images/laptop-and-flower.jpg");
@@ -60,13 +59,18 @@ header {
 main {
 	width: 100%;
 	height: 95%;
-	padding: 20% 10% 20% 10%;
+	/* position: relative; */
+	/* padding: 20% 10% 20% 10%; */
 }
 
 /* == Intro Card with Start Button ===  */
 .container {
+	display: block;
 	width: 100%;
-	height: 100%;
+	height: 95%;
+	position: absolute;
+	margin-top: 5%;
+	margin-left: 5%;
 }
 
 div .card {
@@ -89,28 +93,118 @@ div .card-body {
 }
 
 .card-title {
-	font-size: 2vw;
+	font-size: 3.5vw;
 	line-height: 1.5;
 	font-family: 'Oswald', sans-serif;
 }
 
 #instructions {
 	font-family: 'Arimo', sans-serif;
-	font-size: 2.0vw;
+	font-size: 3.2vw;
 }
 
 p {
 	font-family: 'Arimo', sans-serif;
-	font-size: 1.8vw;
+	font-size: 3vw;
 	line-height: 1.5;
 	cursor: pointer;
+}
+
+h5 {
+	font-size: 3.5vw;
+	line-height: 1.5;
+	font-family: 'Oswald', sans-serif;
+}
+
+h6 {
+	margin-bottom: 20px;
+	font-size: 3vw;
+	font-family: 'Oswald', sans-serif;
 }
 
 .btn {
 	background-color: #817f9f;
 	color: white;
+	font-family: 'Arimo', sans-serif;
+	font-size: 2vw;
 }
 
 .card a {
 	justify-content: center;
+}
+
+/* ====== All Done Card  =======  */
+
+#allDoneContainer {
+	display: none;
+	height: 100%;
+	width: 100%;
+}
+
+#allDoneCard {
+	/* z-index: 3; */
+	z-index: 3;
+	height: 100%;
+	width: 100;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 0 50px;
+}
+
+.input-group-text {
+	background-color: #535058;
+	color: white;
+	font-size: 1.8vw;
+	font-family: 'Arimo', sans-serif;
+	/* padding: 10px 10px; */
+	/* border-radius: 5%; */
+}
+
+input .form-control {
+	font-size: 2.2vw;
+	opacity: .8;
+
+	/* border-radius: 5%; */
+	/* padding: 5.5px; */
+}
+
+.btnDone {
+	background-color: #817f9f;
+	color: white;
+	font-family: 'Arimo', sans-serif;
+	font-size: 1.8vw;
+	border-radius: 5%;
+	/* margin-bottom: 10px; */
+}
+
+/* ====== All Done Card  =======  */
+
+#highScoreContainer {
+	display: none;
+}
+
+#highScoreCard {
+	z-index: 3;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 0 50px;
+}
+
+ol {
+	font-family: 'Arimo', sans-serif;
+	font-size: 3.0vw;
+	color: white;
+}
+
+ol li {
+	font-family: 'Arimo', sans-serif;
+	font-size: 3.0vw;
+	color: white;
+}
+
+.btnHigh {
+	background-color: #817f9f;
+	color: white;
+	font-family: 'Arimo', sans-serif;
+	font-size: 1.8vw;
+	border-radius: 5%;
 }

@@ -5,15 +5,28 @@ $(document).ready(function() {
 	const cardBodyEl = $('.card-body');
 	const cardTitleEl = $('.card-body h5');
 	const cardInstuctionsEl = $('.card-body #instructions');
-	console.log(cardInstuctionsEl);
 	const cardTextEl = $('.card-text');
 	const btnDiv = $('div.btn-div');
 	const startBtn = $('.card-body .btn');
+	const allDoneText = $('#resultsText');
+	const mainContainer = $('.container');
+	const allDoneContainer = $('#allDoneContainer');
+	const allDoneButton = $('#button-addon1');
+	console.log(allDoneButton);
+	const allDoneInput = $('.form-control');
+	console.log(allDoneInput);
+	const highScoreContainer = $('#highScoreContainer');
+	const highScoreLi = $('#highScoreCard li');
+	const goBackButton = $('#button-addon2');
+	console.log(goBackButton);
+	const clearHighButton = $('#button-addon3');
+	console.log(clearHighButton);
 	const cardInstructions =
 		'The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.';
 	const startBtnText = 'Start Quiz';
 	let secondsLeft = 76;
 	let score = [];
+	let finalScore = [];
 	let quiz = [
 		{
 			question: 'Commonly used data types DO NOT include:',
@@ -48,7 +61,6 @@ $(document).ready(function() {
 
 	let counter = 0;
 
-	console.log(quiz.length);
 	// Function declarations
 
 	function startScreen() {
@@ -120,25 +132,38 @@ $(document).ready(function() {
 		var wrong = '<h6>"Wrong!"</h6>';
 
 		if (choice === true) {
-			btnDiv.append(right);
+			btnDiv.html(right).css({ opacity: '0', transition: 'opacity 1s', opacity: '1' });
 			score.push(secondsLeft);
 			emptyDiv();
 			nextQuestion();
 		} else {
-			btnDiv.append(wrong);
+			btnDiv.html(wrong).css({ opacity: '0', transition: 'opacity 1s', opacity: '1' });
 			score.push(secondsLeft - 75);
 			emptyDiv();
 			nextQuestion();
 		}
-		console.log(score);
 	}
 
 	function resultsPage() {
-		let finalScore = score.reduce((a, b) => a + b, 0);
-		let scoreText = 'Your score is ' + finalScore + '!';
+		mainContainer.css('display', 'none');
+		allDoneContainer.css('display', 'block');
+		finalScore.push(score.reduce((a, b) => a + b, 0));
 		cardTitleEl.html('<h5>All done!</h5>');
-		cardTextEl.html('<h6></h6>').text('Your score is ' + finalScore + '!');
-		// var inputDiv = $('<div><div>').addClass()
+		allDoneText.html('<h6></h6>').text('Your score is ' + finalScore + '!');
+		allDoneButton.append();
+	}
+
+	function highScores() {
+		mainContainer.css('display', 'none');
+		allDoneContainer.css('display', 'none');
+		highScoreContainer.css('display', 'block');
+		let hScore = allDoneInput.val();
+		finalScore.push(hScore);
+
+		for (i = 0; i < finalScore; i++) {
+			var li = highScoreLi.text(hScore + ' ' + finalList[i]);
+		}
+		return li;
 	}
 
 	function handler(event) {
@@ -169,6 +194,25 @@ $(document).ready(function() {
 
 	highscoreEl.on('click', function() {
 		event.preventDefault();
+		highScores();
+	});
+
+	allDoneInput.on('submit', function() {
+		event.preventDefault();
+		highScores();
+		console.log('click');
+	});
+
+	allDoneButton.on('click', function() {
+		event.preventDefault();
+		highScores();
+		console.log('click');
+	});
+
+	goBackButton.on('click', function() {
+		event.preventDefault();
+		emptyDiv();
+		startScreen();
 		console.log('click');
 	});
 });

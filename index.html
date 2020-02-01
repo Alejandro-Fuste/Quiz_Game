@@ -34,7 +34,7 @@
         </div>
     </header>
 
-    <main>
+    
        <!-- Intro Card with Start Button -->
        <div class="container">
            <div class="row">
@@ -52,7 +52,56 @@
                </div>
            </div>
        </div>
-    </main>
+
+       <!-- All Done Card -->
+
+       <div class="container-fluid" id="allDoneContainer">
+           <div class="row">
+               <div class="col-sm-12">
+                   <div class="card" id="allDoneCard" style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">All done!</h5>
+                            <hr>
+                            <h6 id="resultsText">H6 Text</h6>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"  id="inputGroup-sizing-default">Default</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                <div class="input-group-append">
+                                    <button class="btnDone" type="button" id="button-addon1">Submit</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- HighScore -->
+
+       <div class="container" id="highScoreContainer">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card" id="highScoreCard" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Highscores</h5>
+                        <hr>
+                        <ol>
+                            <li>test</li>
+                        </ol>
+                        <div class="button-group"> 
+                            <button class="btnHigh" type="button" id="button-addon2">Go Back</button>
+                            <button class="btnHigh" type="button" id="button-addon3">Clear Highscores</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
