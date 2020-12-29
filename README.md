@@ -1,29 +1,73 @@
-# Quiz_Game
+# Quiz Game (HTML, CSS, Javascript, Web API) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-With this homework assigment, I am tasked to create a quiz game. In my web development career, I will probably be asked to complete an assessment. This homework will give us practice in creating an assessment. This quiz game must be a multiple-choice assessment that is timed. The quiz must have dynamically created content with polished and responsive user interface. 
 
+## Description 
+
+In many careers, people will probably be asked to complete an assessment. This application creates an assessment. This quiz game is a multiple-choice assessment that is timed. The quiz dynamically creates content with polished and responsive user interface. This application uses <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong> and the <strong>Web API</strong>.
 
 ## User Story
 
 ```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+
+AS A developer
+
+I WANT to create a timed quiz with Javascript
+
+SO THAT others can gauge their progress 
+
 ```
 
-## Acceptance Criteria
+## Table of Contents
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
+## Installation
+
+To install necessary dependencies, run the following command:
 
 ```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
+
+npm i
+
 ```
+
+## Usage
+
+This application uses HTML, CSS, Javascript and the Web API. 
+
+## License
+
+This project is licensed under the MIT license.
+
+## Contributing
+
+Contribution are welcome. 
+
+## Tests 
+
+To run tests, run the following command:
+
+```
+
+npm test
+
+```
+
+## Questions
+
+<img src="https://avatars2.githubusercontent.com/u/48495840?v=4" alt="avatar" style="border-radius: 16px" width="60"/>
+
+If you have any questions about the repo, open an issue or contact [Alejandro Fuste](https://github.com/Alejandro-Fuste) directly through GitHub.
+
+
 
