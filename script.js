@@ -12,53 +12,17 @@ $(document).ready(function() {
 	const mainContainer = $('.container');
 	const allDoneContainer = $('#allDoneContainer');
 	const allDoneButton = $('#button-addon1');
-	console.log(allDoneButton);
 	const allDoneInput = $('.form-control');
-	console.log(allDoneInput);
 	const highScoreContainer = $('#highScoreContainer');
 	const highScoreLi = $('#highScoreCard li');
 	const goBackButton = $('#button-addon2');
-	console.log(goBackButton);
 	const clearHighButton = $('#button-addon3');
-	console.log(clearHighButton);
 	const cardInstructions =
 		'The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.';
 	const startBtnText = 'Start Quiz';
 	let secondsLeft = 76;
 	let score = [];
 	let finalScore = [];
-	let quiz = [
-		{
-			question: 'Commonly used data types DO NOT include:',
-			answers: [ 'strings', 'alerts', 'boolean', 'float' ],
-			correct: 'alerts'
-		},
-
-		{
-			question: 'The condition of an if/else statement is enclosed with ',
-			answers: [ 'square brackets', 'parentheses', 'curly braces', 'commas' ],
-			correct: 'parentheses'
-		},
-
-		{
-			question: 'Arrays in javascripts can used to store ',
-			answers: [ 'numbers', 'strings', 'objects', 'all of the above' ],
-			correct: 'all of the above'
-		},
-
-		{
-			question: 'Strings must be enclosed with which of the following except ',
-			answers: [ 'curly braces', 'single quotes', 'double quotes', 'back quotes' ],
-			correct: 'curly braces'
-		},
-
-		{
-			question: 'How do you call a function named "myFunction"?',
-			answers: [ 'call function myFunction()', 'call myFunction()', 'myFunction()', 'myfunction()' ],
-			correct: 'myFunction()'
-		}
-	];
-
 	let counter = 0;
 
 	// Function declarations
