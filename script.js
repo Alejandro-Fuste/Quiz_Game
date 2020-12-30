@@ -116,6 +116,8 @@ $(document).ready(function() {
 		}
 	}
 
+	function quizEnd() {}
+
 	function resultsPage() {
 		mainContainer.css('display', 'none');
 		allDoneContainer.css('display', 'block');
