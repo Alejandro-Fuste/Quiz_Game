@@ -43,7 +43,7 @@ npm i
 
 ## Usage
 
-This application uses HTML, CSS, Javascript and the Web API. 
+This application uses HTML, CSS, Javascript, jQuery and the Web API. 
 
 ## License
 
