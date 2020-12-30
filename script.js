@@ -24,6 +24,7 @@ $(document).ready(function() {
 	let score = [];
 	let finalScore = [];
 	let counter = 0;
+	let timerInterval;
 
 	// Function declarations
 
@@ -43,7 +44,7 @@ $(document).ready(function() {
 
 	function setTime() {
 		timerEl.empty();
-		var timerInterval = setInterval(function() {
+		timerInterval = setInterval(function() {
 			secondsLeft--;
 			timerEl.text('Timer:  ' + secondsLeft);
 
@@ -116,7 +117,10 @@ $(document).ready(function() {
 		}
 	}
 
-	function quizEnd() {}
+	function quizEnd() {
+		clearInterval(timerInterval);
+		resultsPage();
+	}
 
 	function resultsPage() {
 		mainContainer.css('display', 'none');
