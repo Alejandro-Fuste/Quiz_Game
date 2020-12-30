@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 			if (secondsLeft === 0) {
 				clearInterval(timerInterval);
-				alert('Time has expired');
+				quizEnd();
 			}
 		}, 1000);
 	}
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
 			cardTextEl.append(a, b, c, d);
 		} else {
-			resultsPage();
+			quizEnd();
 		}
 	}
 
