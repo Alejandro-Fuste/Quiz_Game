@@ -141,14 +141,14 @@ $(document).ready(function() {
 	}
 
 	// Event listener for Start Button
-	startBtn.on('click', function() {
+	startBtn.on('click', function(event) {
 		event.preventDefault();
 		setTime();
 		emptyDiv();
 		initialQuestion();
 	});
 
-	cardTextEl.on('click', function() {
+	cardTextEl.on('click', function(event) {
 		event.preventDefault();
 		handler(event);
 		answerResponse();
@@ -156,24 +156,24 @@ $(document).ready(function() {
 
 	// Event listener for viewing highscores
 
-	highscoreEl.on('click', function() {
+	highscoreEl.on('click', function(event) {
 		event.preventDefault();
 		highScores();
 	});
 
-	allDoneInput.on('submit', function() {
-		event.preventDefault();
-		highScores();
-		console.log('click');
-	});
-
-	allDoneButton.on('click', function() {
+	allDoneInput.on('submit', function(event) {
 		event.preventDefault();
 		highScores();
 		console.log('click');
 	});
 
-	goBackButton.on('click', function() {
+	allDoneButton.on('click', function(event) {
+		event.preventDefault();
+		highScores();
+		console.log('click');
+	});
+
+	goBackButton.on('click', function(event) {
 		event.preventDefault();
 		emptyDiv();
 		startScreen();
