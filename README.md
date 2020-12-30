@@ -1,9 +1,9 @@
-# Quiz Game (HTML, CSS, Javascript, Web API) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+# Quiz Game (HTML, CSS, Javascript, Web API, jQuery) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Description 
 
-In many careers, people will probably be asked to complete an assessment. This application creates an assessment. This quiz game is a multiple-choice assessment that is timed. The quiz dynamically creates content with polished and responsive user interface. This application uses <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong> and the <strong>Web API</strong>.
+In many careers, people will probably be asked to complete an assessment. This application creates an assessment. This quiz game is a multiple-choice assessment that is timed. The quiz dynamically creates content with polished and responsive user interface. This application uses <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>, <strong>jQuery</strong> and the <strong>Web API</strong>.
 
 ## User Story
 
