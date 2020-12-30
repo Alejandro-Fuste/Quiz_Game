@@ -96,12 +96,20 @@ $(document).ready(function() {
 		var wrong = '<h6>"Wrong!"</h6>';
 
 		if (choice === true) {
-			btnDiv.html(right).css({ opacity: '0', transition: 'opacity 1s', opacity: '1' });
+			btnDiv.attr('class', 'feedback');
+			btnDiv.html(right);
+			setTimeout(() => {
+				btnDiv.attr('class', 'hide');
+			}, 1000);
 			score.push(secondsLeft);
 			emptyDiv();
 			nextQuestion();
 		} else {
-			btnDiv.html(wrong).css({ opacity: '0', transition: 'opacity 1s', opacity: '1' });
+			btnDiv.attr('class', 'feedback');
+			btnDiv.html(wrong);
+			setTimeout(() => {
+				btnDiv.attr('class', 'hide');
+			}, 1000);
 			score.push(secondsLeft - 75);
 			emptyDiv();
 			nextQuestion();

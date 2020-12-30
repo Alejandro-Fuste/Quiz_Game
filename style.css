@@ -133,6 +133,18 @@ h6 {
 	justify-content: center;
 }
 
+/* Quiz Card */
+.feedback {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 3vw;
+	font-family: 'Oswald', sans-serif;
+}
+
+.hide {
+	display: none;
+}
+
 /* ====== All Done Card  =======  */
 
 #allDoneContainer {
