@@ -8,7 +8,7 @@ body {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	background-image: url("images/laptop-and-flower.jpg");
+	background-image: url("../images/laptop-and-flower.jpg");
 	background-repeat: no-repeat;
 	background-color: #cccccc;
 	background-position: center;
