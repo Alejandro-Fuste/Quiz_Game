@@ -137,13 +137,21 @@ $(document).ready(function() {
 		mainContainer.css('display', 'none');
 		allDoneContainer.css('display', 'none');
 		highScoreContainer.css('display', 'block');
+		let highscores;
 		let name = allDoneInput.val().trim();
+
+		if (name !== '') {
+			highscores = JSON.parse(window.localStorage.getItem('scores')) || [];
+		}
+
 		let scores = {
 			name,
 			finalScore
 		};
 
-		localStorage.setItem('scores', JSON.stringify(scores));
+		highscores.push(scores);
+
+		localStorage.setItem('scores', JSON.stringify(highscores));
 		// for (i = 0; i < finalScore; i++) {
 		// 	var li = highScoreLi.text(name + ' ' + finalList[i]);
 		// }
