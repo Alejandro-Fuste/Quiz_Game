@@ -137,15 +137,17 @@ $(document).ready(function() {
 		mainContainer.css('display', 'none');
 		allDoneContainer.css('display', 'none');
 		highScoreContainer.css('display', 'block');
-		let hScore = allDoneInput.val();
-		console.log(`hScore: ${hScore}`);
-		finalScore.push(hScore);
-		console.log(`finalScore: ${finalScore}`);
+		let name = allDoneInput.val().trim();
+		let scores = {
+			name,
+			finalScore
+		};
 
-		for (i = 0; i < finalScore; i++) {
-			var li = highScoreLi.text(hScore + ' ' + finalList[i]);
-		}
-		return li;
+		localStorage.setItem('scores', JSON.stringify(scores));
+		// for (i = 0; i < finalScore; i++) {
+		// 	var li = highScoreLi.text(name + ' ' + finalList[i]);
+		// }
+		// return li;
 	}
 
 	function handler(event) {
@@ -155,10 +157,6 @@ $(document).ready(function() {
 			answerChoice = target.text().slice(3);
 			return answerChoice;
 		}
-	}
-
-	function saveHighscore() {
-		let name = allDoneInput.val().trim();
 	}
 
 	// Event listener for Start Button
