@@ -12,7 +12,9 @@ $(document).ready(function() {
 	const mainContainer = $('.container');
 	const allDoneContainer = $('#allDoneContainer');
 	const allDoneButton = $('#button-addon1');
+	console.log(allDoneButton);
 	const allDoneInput = $('.form-control');
+	console.log(allDoneInput);
 	const highScoreContainer = $('#highScoreContainer');
 	const highScoreLi = $('#highScoreCard li');
 	const goBackButton = $('#button-addon2');
@@ -136,7 +138,9 @@ $(document).ready(function() {
 		allDoneContainer.css('display', 'none');
 		highScoreContainer.css('display', 'block');
 		let hScore = allDoneInput.val();
+		console.log(`hScore: ${hScore}`);
 		finalScore.push(hScore);
+		console.log(`finalScore: ${finalScore}`);
 
 		for (i = 0; i < finalScore; i++) {
 			var li = highScoreLi.text(hScore + ' ' + finalList[i]);
@@ -151,7 +155,10 @@ $(document).ready(function() {
 			answerChoice = target.text().slice(3);
 			return answerChoice;
 		}
-		// return answerChoice;
+	}
+
+	function saveHighscore() {
+		let name = allDoneInput.val().trim();
 	}
 
 	// Event listener for Start Button
