@@ -132,9 +132,7 @@ $(document).ready(function() {
 	}
 
 	function highScores() {
-		mainContainer.css('display', 'none');
-		allDoneContainer.css('display', 'none');
-		highScoreContainer.css('display', 'block');
+		renderHighScore();
 		let highscores;
 		let name = allDoneInput.val().trim();
 
@@ -156,7 +154,11 @@ $(document).ready(function() {
 		// return li;
 	}
 
-	function renderHighScore() {}
+	function renderHighScore() {
+		mainContainer.css('display', 'none');
+		allDoneContainer.css('display', 'none');
+		highScoreContainer.css('display', 'block');
+	}
 
 	function handler(event) {
 		var target = $(event.target);
