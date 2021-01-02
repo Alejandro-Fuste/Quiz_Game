@@ -191,7 +191,6 @@ $(document).ready(function() {
 	allDoneInput.on('submit', function(event) {
 		event.preventDefault();
 		highScores();
-		console.log('click');
 	});
 
 	allDoneButton.on('click', function(event) {
@@ -202,8 +201,10 @@ $(document).ready(function() {
 
 	goBackButton.on('click', function(event) {
 		event.preventDefault();
-		emptyDiv();
-		startScreen();
-		console.log('click');
+		// emptyDiv();
+		// startScreen();
+		// console.log('click');
+
+		window.location.href = 'index.html';
 	});
 });
