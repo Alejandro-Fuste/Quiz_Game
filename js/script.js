@@ -155,9 +155,12 @@ $(document).ready(function() {
 	}
 
 	function renderHighScore() {
+		// change display of page
 		mainContainer.css('display', 'none');
 		allDoneContainer.css('display', 'none');
 		highScoreContainer.css('display', 'block');
+
+		// get values from localStorage
 	}
 
 	function handler(event) {
