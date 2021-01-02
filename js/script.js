@@ -133,11 +133,12 @@ $(document).ready(function() {
 
 	function highScores() {
 		renderHighScore();
-		let highscores;
+		let highscores = [];
 		let name = allDoneInput.val().trim();
 
+		// Todo: add error message to handle empty input
 		if (name !== '') {
-			highscores = JSON.parse(window.localStorage.getItem('scores')) || [];
+			highscores = JSON.parse(window.localStorage.getItem('scores'));
 		}
 
 		let scores = {
@@ -148,10 +149,6 @@ $(document).ready(function() {
 		highscores.push(scores);
 
 		localStorage.setItem('scores', JSON.stringify(highscores));
-		// for (i = 0; i < finalScore; i++) {
-		// 	var li = highScoreLi.text(name + ' ' + finalList[i]);
-		// }
-		// return li;
 	}
 
 	function renderHighScore() {
