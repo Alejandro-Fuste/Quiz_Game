@@ -201,10 +201,6 @@ $(document).ready(function() {
 
 	goBackButton.on('click', function(event) {
 		event.preventDefault();
-		// emptyDiv();
-		// startScreen();
-		// console.log('click');
-
 		window.location.href = 'index.html';
 	});
 });
