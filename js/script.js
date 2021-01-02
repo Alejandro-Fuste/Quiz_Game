@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	// Variables holding selectors
-	const highscoreEl = $('#highscore');
 	const timerEl = $('#timer');
 	const cardBodyEl = $('.card-body');
 	const cardTitleEl = $('.card-body h5');
@@ -15,6 +14,7 @@ $(document).ready(function() {
 	console.log(allDoneButton);
 	const allDoneInput = $('.form-control');
 	console.log(allDoneInput);
+	const highscoreEl = $('#highscore');
 	const highScoreContainer = $('#highScoreContainer');
 	const highScoreLi = $('#highScoreCard li');
 	const goBackButton = $('#button-addon2');
