@@ -160,7 +160,7 @@ $(document).ready(function() {
 		allDoneContainer.css('display', 'none');
 		highScoreContainer.css('display', 'block');
 
-		// get values from localStorage
+		// call printHighScores function
 	}
 
 	function handler(event) {
