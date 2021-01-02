@@ -24,7 +24,7 @@ $(document).ready(function() {
 	const startBtnText = 'Start Quiz';
 
 	// State variables
-	let [ secondsLeft, score, finalScore, counter, timerInterval ] = [ 76, [], '', 0 ];
+	let [ secondsLeft, score, finalScore, highscores, counter, timerInterval ] = [ 76, [], '', [], 0 ];
 
 	// Function declarations
 
@@ -133,7 +133,6 @@ $(document).ready(function() {
 
 	function highScores() {
 		renderHighScore();
-		let highscores = [];
 		let name = allDoneInput.val().trim();
 
 		// Todo: add error message to handle empty input
