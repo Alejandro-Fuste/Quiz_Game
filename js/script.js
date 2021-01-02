@@ -22,11 +22,9 @@ $(document).ready(function() {
 	const cardInstructions =
 		'The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.';
 	const startBtnText = 'Start Quiz';
-	let secondsLeft = 76;
-	let score = [];
-	let finalScore = [];
-	let counter = 0;
-	let timerInterval;
+
+	// State variables
+	let [ secondsLeft, score, finalScore, counter, timerInterval ] = [ 76, [], '', 0 ];
 
 	// Function declarations
 
@@ -127,7 +125,7 @@ $(document).ready(function() {
 	function resultsPage() {
 		mainContainer.css('display', 'none');
 		allDoneContainer.css('display', 'block');
-		finalScore.push(score.reduce((a, b) => a + b, 0));
+		finalScore = score.reduce((a, b) => a + b, 0);
 		cardTitleEl.html('<h5>All done!</h5>');
 		allDoneText.html('<h6></h6>').text('Your score is ' + finalScore + '!');
 		allDoneButton.append();
