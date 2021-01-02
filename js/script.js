@@ -137,9 +137,9 @@ $(document).ready(function() {
 		let name = allDoneInput.val().trim();
 
 		// Todo: add error message to handle empty input
-		if (name !== '') {
-			highscores = JSON.parse(window.localStorage.getItem('scores'));
-		}
+		// if (name !== '') {
+		// 	highscores = JSON.parse(window.localStorage.getItem('scores'));
+		// }
 
 		let scores = {
 			name,
