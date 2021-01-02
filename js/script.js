@@ -16,7 +16,7 @@ $(document).ready(function() {
 	console.log(allDoneInput);
 	const highscoreEl = $('#highscore');
 	const highScoreContainer = $('#highScoreContainer');
-	const highScoreLi = $('#highScoreCard li');
+
 	const goBackButton = $('#button-addon2');
 	const clearHighButton = $('#button-addon3');
 	const cardInstructions =
@@ -155,9 +155,6 @@ $(document).ready(function() {
 		mainContainer.css('display', 'none');
 		allDoneContainer.css('display', 'none');
 		highScoreContainer.css('display', 'block');
-
-		// call printHighScores function
-		printHighScores();
 	}
 
 	function handler(event) {
@@ -187,7 +184,8 @@ $(document).ready(function() {
 
 	highscoreEl.on('click', function(event) {
 		event.preventDefault();
-		highScores();
+		renderHighScore();
+		printHighScores();
 	});
 
 	allDoneInput.on('submit', function(event) {
