@@ -161,6 +161,7 @@ $(document).ready(function() {
 		highScoreContainer.css('display', 'block');
 
 		// call printHighScores function
+		printHighScores();
 	}
 
 	function handler(event) {
