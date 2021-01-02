@@ -156,6 +156,8 @@ $(document).ready(function() {
 		// return li;
 	}
 
+	function renderHighScore() {}
+
 	function handler(event) {
 		var target = $(event.target);
 		var answerChoice;
