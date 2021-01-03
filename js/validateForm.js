@@ -8,7 +8,7 @@ const errorMessageDiv = $('#errorMessage');
 const errorMessages = { blank: "Input field can't be left blank", characters: 'Input must only contain letters' };
 
 // Create object to styling for error messages
-const errorStyles = {};
+const errorStyles = { display: 'block', border: '5px solid red' };
 
 // Validate Input Function
 function validateForm() {
