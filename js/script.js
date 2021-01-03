@@ -18,7 +18,7 @@ $(document).ready(function() {
 	const highScoreContainer = $('#highScoreContainer');
 
 	const goBackButton = $('#button-addon2');
-	const clearHighButton = $('#button-addon3');
+
 	const cardInstructions =
 		'The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.';
 	const startBtnText = 'Start Quiz';
@@ -137,7 +137,7 @@ $(document).ready(function() {
 
 		// Todo: add error message to handle empty input
 		if (name !== '') {
-			highscores = JSON.parse(window.localStorage.getItem('scores'));
+			highscores = JSON.parse(window.localStorage.getItem('scores')) || [];
 		}
 
 		let scores = {
