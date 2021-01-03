@@ -1,7 +1,8 @@
 /* Validate Input from All Done Page */
 
-// Get Input Selector
+// Get Selectors
 const allDoneInput = $('.form-control');
+const errorMessageDiv = $('#errorMessage');
 
 // Create object to hold error messages
 const errorMessages = { blank: "Input field can't be left blank", characters: 'Input must only contain letters' };
