@@ -148,6 +148,8 @@ $(document).ready(function() {
 		highscores.push(scores);
 
 		localStorage.setItem('scores', JSON.stringify(highscores));
+
+		window.location.href = 'highscore.html';
 	}
 
 	function renderHighScore() {
@@ -184,8 +186,7 @@ $(document).ready(function() {
 
 	highscoreEl.on('click', function(event) {
 		event.preventDefault();
-		renderHighScore();
-		printHighScores();
+		window.location.href = 'highscore.html';
 	});
 
 	allDoneInput.on('submit', function(event) {
