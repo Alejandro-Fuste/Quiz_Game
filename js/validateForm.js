@@ -6,8 +6,8 @@ const allDoneInput = $('.form-control');
 // Create object to hold error messages
 const errorMessages = { blank: "Input field can't be left blank", characters: 'Input must only contain letters' };
 
-// // Create array to hold error types
-// const errorTypes = ['', ]
+// Create object to styling for error messages
+const errorStyles = {};
 
 // Validate Input Function
 function validateForm() {
