@@ -15,6 +15,9 @@ const errorStyles = {
 	padding: '10px'
 };
 
+// Render error message
+function renderErrorMessage() {}
+
 // Validate Input Function
 function validateForm() {
 	// Get value from input
