@@ -19,4 +19,6 @@ function validateForm() {
 	}
 
 	// Guard clause to check for valid input & return error message
+	if (/[A-Za-z]/g.test(name)) {
+	}
 }
