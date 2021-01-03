@@ -8,3 +8,4 @@ let name = allDoneInput.val().trim();
 const errorMessages = { blank: "Input field can't be left blank", characters: 'Input must only contain letters' };
 
 // Validate Input Function
+function validateForm() {}
