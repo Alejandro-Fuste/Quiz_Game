@@ -43,6 +43,7 @@ header {
 	/* color: #CDC4CB; */
 	font-size: 2.5vw;
 	z-index: 3;
+	margin: 10px 20px;
 }
 
 #highscore {

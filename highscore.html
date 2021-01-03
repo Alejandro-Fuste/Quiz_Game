@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz Game</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Arimo|Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
@@ -13,49 +13,68 @@
     <!-- Overlay for background image -->
     <div id="overlay"></div>
 
-    <!-- Header with Highscore and Timer -->
-    <header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-3">
-                    <span><p id="highscore">View Highscores</p></span>
-                </div>
-
-                <div class="col-sm-6">
-
-                </div>
+    <div class="container-fluid d-flex flex-column" style="height: 100vh;">
+        <!-- Header with Highscore and Timer -->
+        <div class="row d-flex justify-content-between">
+            <div class="col-sm-3">
+                <span><p id="highscore">View Highscores</p></span>
                 
-                <div class="col-sm-3">
-                    <span><p id="timer">Time: 75</p></span>
-                </div>
+                    <!-- <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span><p id="highscore">View Highscores</p></span>
+                            </div>
 
+                            <div class="col-sm-6">
+
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <span><p id="timer">Time: 75</p></span>
+                            </div>
+
+                        </div>
+
+                    </div> -->
+                
+            </div>
+
+            <div class="col-sm-3">
+                <span><p id="timer">Time: 75</p></span>
             </div>
 
         </div>
-    </header>
-
-       <!-- HighScore -->
-
-       <div class="container" id="highScoreContainer">
-        <div class="row">
+        
+        <!-- HighScore -->
+        <div class="row" style="margin-top: 100px;">
             <div class="col-sm-12">
-                <div class="card" id="highScoreCard" style="width: 100%;">
-                    <div class="card-body">
-                        <h5 class="card-title">Highscores</h5>
-                        <hr>
-                        <ol>
-                        <!-- dynamically added high scores here -->
-                        </ol>
-                        <div class="button-group"> 
-                            <button class="btnHigh" type="button" id="button-addon2">Go Back</button>
-                            <button class="btnHigh" type="button" id="button-addon3">Clear Highscores</button>
+
+                <div class="container-fluid" id="highScoreContainer" style="width: 50%">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card" id="highScoreCard" style="width: 100%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Highscores</h5>
+                                    <hr>
+                                    <ol>
+                                    <!-- dynamically added high scores here -->
+                                    </ol>
+                                    <hr>
+                                    <div class="button-group"> 
+                                        <button class="btnHigh" type="button" id="button-addon2">Go Back</button>
+                                        <button class="btnHigh" type="button" id="button-addon3">Clear Highscores</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
-    
+
+
+    </div>    
    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
