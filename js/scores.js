@@ -5,11 +5,13 @@
 const highScoreContainer = $('#highScoreContainer');
 const highScoreOl = $('#highScoreCard ol');
 
+// Render the highscore card
 function renderHighScore() {
 	// change display to show container
 	highScoreContainer.css('display', 'block');
 }
 
+// Display highscores from localStorage
 function printHighScores() {
 	renderHighScore();
 
@@ -30,4 +32,7 @@ function printHighScores() {
 	// display on page my appending
 }
 
+// Clear highscores from localStorage
+
+// Run printHighScores function when highscore.html loads
 printHighScores();
