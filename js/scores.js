@@ -1,6 +1,18 @@
-/* file to hold code for scores */
+/* file to hold code for rendering high scores */
+
+// Variables to hold selectors
+
+const highScoreContainer = $('#highScoreContainer');
+const highScoreOl = $('#highScoreCard ol');
+
+function renderHighScore() {
+	// change display to show container
+	highScoreContainer.css('display', 'block');
+}
 
 function printHighScores() {
+	renderHighScore();
+
 	// get scores from localStorage or set empty array
 	let hScores = JSON.parse(window.localStorage.getItem('scores'));
 
@@ -10,10 +22,12 @@ function printHighScores() {
 	});
 	console.table(hScores);
 	// loop through each score to create an li
-	const highScoreOl = $('#highScoreCard ol');
+
 	hScores.forEach(function(scores) {
 		let liTag = $('<li>').html(`${scores.name} - ${scores.finalScore}`);
 		highScoreOl.append(liTag);
 	});
 	// display on page my appending
 }
+
+printHighScores();
