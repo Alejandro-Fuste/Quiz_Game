@@ -4,6 +4,7 @@
 
 const highScoreContainer = $('#highScoreContainer');
 const highScoreOl = $('#highScoreCard ol');
+const clearHighButton = $('#button-addon3');
 
 // Render the highscore card
 function renderHighScore() {
@@ -33,6 +34,12 @@ function printHighScores() {
 }
 
 // Clear highscores from localStorage
+function clearHighScores() {
+	localStorage.removeItem('scores');
+	location.reload();
+}
+
+clearHighButton.on('click', clearHighScores);
 
 // Run printHighScores function when highscore.html loads
 printHighScores();
