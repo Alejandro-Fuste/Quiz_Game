@@ -79,6 +79,7 @@ div .card {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.2);
 	padding: 0 50px;
+	border-left: 3px solid #817f9f;
 }
 
 .card-title,
@@ -121,6 +122,12 @@ h6 {
 	margin-bottom: 20px;
 	font-size: 3vw;
 	font-family: 'Oswald', sans-serif;
+}
+
+hr,
+.hr {
+	border-color: rgb(226, 220, 220);
+	opacity: .3;
 }
 
 .btn {
