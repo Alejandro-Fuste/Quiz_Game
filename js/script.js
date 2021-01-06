@@ -145,6 +145,8 @@ $(document).ready(function() {
 	function highScores() {
 		renderHighScore();
 
+		highscores = JSON.parse(localStorage.getItem('scores')) || [];
+
 		let name = allDoneInput.val().trim();
 
 		let scores = {
@@ -175,13 +177,38 @@ $(document).ready(function() {
 		}
 	}
 
-	/* Validate Input from All Done Page */
+	/* *****  Validate Input from All Done Page ***** */
 
 	// Render error message
 	function renderErrorMessage(message) {
 		errorMessageDiv.css(errorStyles);
 		errorMessageDiv.text(message);
 	}
+
+	// Validate Input Function
+	function validateForm() {
+		// Get value from input
+		let name = allDoneInput.val().trim();
+		console.log(name);
+
+		// Guard clause to check for blank value & return error message
+		if ([ '', null, undefined ].includes(name)) {
+			renderErrorMessage(errorMessages.blank);
+			return false;
+		}
+
+		// Guard clause to check for valid input & return error message
+		if (/[^A-Za-z\s]/g.test(name)) {
+			renderErrorMessage(errorMessages.characters);
+			return false;
+		}
+
+		if (/[A-Za-z\s]/g.test(name)) {
+			return highScores();
+		}
+	}
+
+	/*  ********** Event Listeners ********** */
 
 	// Event listener for Start Button
 	startBtn.on('click', function(event) {
@@ -210,11 +237,11 @@ $(document).ready(function() {
 		printHighScores();
 	});
 
-	// allDoneButton.on('click', function(event) {
-	// 	event.preventDefault();
-	// 	// validateForm();
-	// 	highScores();
-	// });
+	allDoneButton.on('click', function(event) {
+		event.preventDefault();
+		console.log('click');
+		validateForm();
+	});
 
 	goBackButton.on('click', function(event) {
 		event.preventDefault();
