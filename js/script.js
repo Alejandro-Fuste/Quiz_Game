@@ -16,8 +16,8 @@ $(document).ready(function() {
 	console.log(allDoneInput);
 	const highscoreEl = $('#highscore');
 	const highScoreContainer = $('#highScoreContainer');
-
 	const goBackButton = $('#button-addon2');
+	const errorMessageDiv = $('#errorMessage');
 
 	const cardInstructions =
 		'The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.';
@@ -25,6 +25,17 @@ $(document).ready(function() {
 
 	// State variables
 	let [ secondsLeft, score, finalScore, highscores, counter, timerInterval ] = [ 76, [], '', [], 0 ];
+
+	// Create object to hold error messages
+	const errorMessages = { blank: "Input field can't be left blank", characters: 'Input must only contain letters' };
+
+	// Create object to styling for error messages
+	const errorStyles = {
+		display: 'inline',
+		border: '3px solid rgb(235, 78, 78)',
+		color: 'rgb(235, 78, 78)',
+		padding: '10px'
+	};
 
 	// Function declarations
 
@@ -133,12 +144,15 @@ $(document).ready(function() {
 
 	function highScores() {
 		renderHighScore();
+
 		let name = allDoneInput.val().trim();
 
-		// Todo: add error message to handle empty input
-		if (name !== '') {
-			highscores = JSON.parse(window.localStorage.getItem('scores')) || [];
-		}
+		// // Todo: add error message to handle empty input
+		// if (name !== '') {
+		// 	highscores = JSON.parse(window.localStorage.getItem('scores')) || [];
+		// }
+
+		// validateForm(name);
 
 		let scores = {
 			name,
@@ -195,11 +209,11 @@ $(document).ready(function() {
 		printHighScores();
 	});
 
-	allDoneButton.on('click', function(event) {
-		event.preventDefault();
-		highScores();
-		console.log('click');
-	});
+	// allDoneButton.on('click', function(event) {
+	// 	event.preventDefault();
+	// 	// validateForm();
+	// 	highScores();
+	// });
 
 	goBackButton.on('click', function(event) {
 		event.preventDefault();
