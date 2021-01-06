@@ -147,13 +147,6 @@ $(document).ready(function() {
 
 		let name = allDoneInput.val().trim();
 
-		// // Todo: add error message to handle empty input
-		// if (name !== '') {
-		// 	highscores = JSON.parse(window.localStorage.getItem('scores')) || [];
-		// }
-
-		// validateForm(name);
-
 		let scores = {
 			name,
 			finalScore
@@ -180,6 +173,14 @@ $(document).ready(function() {
 			answerChoice = target.text().slice(3);
 			return answerChoice;
 		}
+	}
+
+	/* Validate Input from All Done Page */
+
+	// Render error message
+	function renderErrorMessage(message) {
+		errorMessageDiv.css(errorStyles);
+		errorMessageDiv.text(message);
 	}
 
 	// Event listener for Start Button
