@@ -58,12 +58,6 @@ body {
 /* ============================== */
 
 /* ======= body content ========= */
-main {
-	width: 100%;
-	height: 95%;
-	/* position: relative; */
-	/* padding: 20% 10% 20% 10%; */
-}
 
 /* == Intro Card with Start Button ===  */
 .container-fluid {
@@ -215,6 +209,7 @@ ol li {
 	font-family: 'Arimo', sans-serif;
 	font-size: 3.0vw;
 	color: white;
+	margin: 5px;
 }
 
 .btnHigh {
