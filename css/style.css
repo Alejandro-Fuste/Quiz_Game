@@ -183,7 +183,6 @@ input .form-control {
 	color: white;
 	font-family: 'Arimo', sans-serif;
 	font-size: 1.8vw;
-	border-radius: 5%;
 }
 
 /* ====== All Done Card  =======  */
@@ -210,12 +209,4 @@ ol li {
 	font-size: 3.0vw;
 	color: white;
 	margin: 5px;
-}
-
-.btnHigh {
-	background-color: #817f9f;
-	color: white;
-	font-family: 'Arimo', sans-serif;
-	font-size: 1.8vw;
-	border-radius: 5%;
 }

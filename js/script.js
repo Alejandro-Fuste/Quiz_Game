@@ -8,12 +8,13 @@ $(document).ready(function() {
 	const btnDiv = $('div.btn-div');
 	const startBtn = $('.card-body .btn');
 	const allDoneText = $('#resultsText');
-	const mainContainer = $('.container');
+	const mainContainer = $('#startContainer');
 	const allDoneContainer = $('#allDoneContainer');
+	const submitScore = $('form');
+	const submitDivEl = $('.submitDiv');
 	const allDoneButton = $('#button-addon1');
 	console.log(allDoneButton);
 	const allDoneInput = $('.form-control');
-	console.log(allDoneInput);
 	const highscoreEl = $('#highscore');
 	const highScoreContainer = $('#highScoreContainer');
 	const goBackButton = $('#button-addon2');
@@ -123,12 +124,17 @@ $(document).ready(function() {
 	}
 
 	function resultsPage() {
-		mainContainer.css('display', 'none');
+		mainContainer.removeAttr('class');
+		mainContainer.attr('class', 'hide');
 		allDoneContainer.css('display', 'block');
+		cardBodyEl.css('display', 'block');
+		submitScore.css('display', 'block');
 		finalScore = score.reduce((a, b) => a + b, 0);
 		cardTitleEl.html('<h5>All done!</h5>');
-		allDoneText.html('<h6></h6>').text('Your score is ' + finalScore + '!');
-		allDoneButton.append();
+		allDoneText.html('<p>').text('Your score is ' + finalScore + '!');
+		cardTextEl.append(allDoneText);
+		submitDivEl.append(submitScore);
+		// allDoneButton.append();
 	}
 
 	function highScores() {
@@ -178,7 +184,6 @@ $(document).ready(function() {
 	function validateForm() {
 		// Get value from input
 		let name = allDoneInput.val().trim();
-		console.log(name);
 
 		// Guard clause to check for blank value & return error message
 		if ([ '', null, undefined ].includes(name)) {
@@ -228,7 +233,6 @@ $(document).ready(function() {
 
 	allDoneButton.on('click', function(event) {
 		event.preventDefault();
-		console.log('click');
 		validateForm();
 	});
 

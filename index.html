@@ -15,74 +15,70 @@
     <div class="container-fluid">
         
         <!-- Header with Highscore and Timer -->
-    <div class="row header">
-        <div class="col-sm-3">
-            <span><p id="highscore">View Highscores</p></span>
+        <div class="row header">
+            <div class="col-sm-3">
+                <span><p id="highscore">View Highscores</p></span>
+            </div>
+
+            <div class="col-sm-6">
+
+            </div>
+            
+            <div class="col-sm-3">
+                <span><p id="timer">Time: 75</p></span>
+            </div>
+
         </div>
 
-        <div class="col-sm-6">
-
+    
+       <!-- Intro Card with Start Button -->
+        <div class="row" id="startContainer">
+            <div class="col-sm-12 d-flex justify-content-center">
+            <div class="card" style="width: 80%;">
+                <div class="card-body">
+                    <h5 class="card-title">Code Quiz Challenge</h5>
+                    <hr>
+                    <h6 id="instructions">Instructions:</h6>
+                    <p class="card-text">The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.</p>
+                    <hr>
+                    <div class="btn-div"><span><button class="btn">Start Quiz</button></span></div>
+                </div>
+                </div>
+            </div>
         </div>
+
         
-        <div class="col-sm-3">
-            <span><p id="timer">Time: 75</p></span>
+       <!-- All Done Card -->
+        <div class="row" id="allDoneContainer">
+            <div class="col-sm-12">
+                <div class="card" id="allDoneCard" style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">All done!</h5>
+                            
+                            <p id="resultsText">p Text</p>
+                            <div class="submitDiv"></div>
+                            <form class="row g-3" style="display: none;" onsubmit="return validateForm()">
+                                <div class="col-auto">
+                                    <input type="text" class="form-control" placeholder="Enter Name">
+                                    <button type="submit" class=" btn btnDone" id="button-addon1">Save</button>
+                                </div>
+                                <!-- <div class="col-auto">
+                                    <button type="submit" class="btnDone" id="button-addon1">Save</button>
+                                </div> -->
+                            </form>
+                            
+                            <span id="errorMessage" style="display: none;">Error Message</span>
+                        </div>
+                </div>
+            </div>
         </div>
 
     </div>
 
-        
+       
+
+       
     
-
-    
-       <!-- Intro Card with Start Button -->
-           <div class="row">
-               <div class="col-sm-12 d-flex justify-content-center">
-                <div class="card" style="width: 80%;">
-                    <div class="card-body">
-                      <h5 class="card-title">Code Quiz Challenge</h5>
-                      <hr>
-                      <h6 id="instructions">Instructions:</h6>
-                      <p class="card-text">The quiz will begin once the start button is clicked. You will have 75 seconds to complete the quiz. Questions that are answered incorrectly will result in the time being reduced. When questions are answered correctly, the time it took to answer question will be recorded. Your total time will be displayed at the end of the quiz.</p>
-                      <hr>
-                      <div class="btn-div"><span><button class="btn">Start Quiz</button></span></div>
-                    </div>
-                  </div>
-               </div>
-           </div>
-       </div>
-
-       <!-- All Done Card -->
-
-       <div class="container-fluid" id="allDoneContainer">
-           <div class="row">
-               <div class="col-sm-12">
-                   <div class="card" id="allDoneCard" style="width: 100%;">
-                        <div class="card-body">
-                            <h5 class="card-title">All done!</h5>
-                            <hr>
-                            <h6 id="resultsText">H6 Text</h6>
-                            <form class="row g-3" onsubmit="return validateForm()">
-                                <div class="col-auto">
-                                    <input type="text" class="form-control" placeholder="Enter Name">
-                                </div>
-                                <div class="col-auto">
-                                    <button type="submit" class="btnDone" id="button-addon1">Save</button>
-                                </div>
-                            </form>
-                            <hr>
-                            <span id="errorMessage" style="display: none;">Error Message</span>
-
-                            <!-- <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Enter First Name" aria-label="Sizing example input" aria-describedby="button-addon1">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon1">Save Score</button> 
-                            </div> -->
-
-
-                        </div>
-                   </div>
-               </div>
-           </div>
-       </div>
     
    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
