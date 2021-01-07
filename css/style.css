@@ -173,23 +173,9 @@ hr,
 input .form-control {
 	font-size: 2.2vw;
 	opacity: .8;
-
-	/* border-radius: 5%; */
-	/* padding: 5.5px; */
-}
-
-.btnDone {
-	background-color: #817f9f;
-	color: white;
-	font-family: 'Arimo', sans-serif;
-	font-size: 1.8vw;
 }
 
 /* ====== All Done Card  =======  */
-
-#highScoreContainer {
-	display: none;
-}
 
 #highScoreCard {
 	z-index: 3;

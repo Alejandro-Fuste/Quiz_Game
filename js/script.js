@@ -13,7 +13,7 @@ $(document).ready(function() {
 	const submitScore = $('form');
 	const submitDivEl = $('.submitDiv');
 	const allDoneButton = $('#button-addon1');
-	console.log(allDoneButton);
+	const buttonDiv = $('#buttonDiv');
 	const allDoneInput = $('.form-control');
 	const highscoreEl = $('#highscore');
 	const highScoreContainer = $('#highScoreContainer');
@@ -132,9 +132,9 @@ $(document).ready(function() {
 		finalScore = score.reduce((a, b) => a + b, 0);
 		cardTitleEl.html('<h5>All done!</h5>');
 		allDoneText.html('<p>').text('Your score is ' + finalScore + '!');
-		cardTextEl.append(allDoneText);
+		allDoneText.append(allDoneText);
 		submitDivEl.append(submitScore);
-		// allDoneButton.append();
+		buttonDiv.append(allDoneButton);
 	}
 
 	function highScores() {
