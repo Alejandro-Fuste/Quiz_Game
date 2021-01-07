@@ -23,7 +23,6 @@ function printHighScores() {
 	hScores.sort(function(a, b) {
 		return b.finalScore - a.finalScore;
 	});
-	console.table(hScores);
 	// loop through each score to create an li
 
 	hScores.forEach(function(scores) {
