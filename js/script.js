@@ -11,7 +11,6 @@ $(document).ready(function() {
 	const mainContainer = $('#startContainer');
 	const allDoneContainer = $('#allDoneContainer');
 	const submitScore = $('form');
-	console.log(submitScore);
 	const submitDivEl = $('.submitDiv');
 	const allDoneButton = $('#button-addon1');
 	const buttonDiv = $('#buttonDiv');
@@ -140,8 +139,6 @@ $(document).ready(function() {
 	}
 
 	function highScores() {
-		// renderHighScore();
-
 		highscores = JSON.parse(localStorage.getItem('scores')) || [];
 
 		let name = allDoneInput.val().trim();
@@ -157,13 +154,6 @@ $(document).ready(function() {
 		localStorage.setItem('scores', JSON.stringify(highscores));
 
 		window.location.href = 'highscore.html';
-	}
-
-	function renderHighScore() {
-		// change display of page
-		mainContainer.css('display', 'none');
-		allDoneContainer.css('display', 'none');
-		highScoreContainer.css('display', 'block');
 	}
 
 	function handler(event) {
