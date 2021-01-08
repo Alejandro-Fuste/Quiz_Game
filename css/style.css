@@ -170,9 +170,9 @@ hr,
 	/* border-radius: 5%; */
 }
 
-input .form-control {
+.form-control {
 	font-size: 2.2vw;
-	opacity: .8;
+	height: 100%;
 }
 
 /* ====== All Done Card  =======  */
