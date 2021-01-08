@@ -6,11 +6,12 @@ $(document).ready(function() {
 	const cardInstuctionsEl = $('.card-body #instructions');
 	const cardTextEl = $('.card-text');
 	const btnDiv = $('div.btn-div');
-	const startBtn = $('.card-body .btn');
+	const startBtn = $('#startBtn');
 	const allDoneText = $('#resultsText');
 	const mainContainer = $('#startContainer');
 	const allDoneContainer = $('#allDoneContainer');
 	const submitScore = $('form');
+	console.log(submitScore);
 	const submitDivEl = $('.submitDiv');
 	const allDoneButton = $('#button-addon1');
 	const buttonDiv = $('#buttonDiv');
@@ -126,6 +127,7 @@ $(document).ready(function() {
 	function resultsPage() {
 		mainContainer.removeAttr('class');
 		mainContainer.attr('class', 'hide');
+		mainContainer.remove();
 		allDoneContainer.css('display', 'block');
 		cardBodyEl.css('display', 'block');
 		submitScore.css('display', 'block');
@@ -138,11 +140,12 @@ $(document).ready(function() {
 	}
 
 	function highScores() {
-		renderHighScore();
+		// renderHighScore();
 
 		highscores = JSON.parse(localStorage.getItem('scores')) || [];
 
 		let name = allDoneInput.val().trim();
+		console.log(name);
 
 		let scores = {
 			name,
@@ -225,13 +228,12 @@ $(document).ready(function() {
 		window.location.href = 'highscore.html';
 	});
 
-	allDoneInput.on('submit', function(event) {
+	submitScore.on('submit', function(event) {
 		event.preventDefault();
-		renderHighScore();
-		printHighScores();
+		validateForm();
 	});
 
-	allDoneButton.on('click', function(event) {
+	allDoneButton.on('submit', function(event) {
 		event.preventDefault();
 		validateForm();
 	});
