@@ -64,6 +64,10 @@ body {
 	height: 100%;
 }
 
+#startContainer {
+	height: 92%;
+}
+
 div .card {
 	z-index: 3;
 	height: 100%;
