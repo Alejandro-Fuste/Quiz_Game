@@ -127,7 +127,7 @@ $(document).ready(function() {
 		mainContainer.removeAttr('class');
 		mainContainer.attr('class', 'hide');
 		mainContainer.remove();
-		allDoneContainer.css('display', 'block');
+		allDoneContainer.css('display', 'flex');
 		cardBodyEl.css('display', 'block');
 		submitScore.css('display', 'block');
 		finalScore = score.reduce((a, b) => a + b, 0);
