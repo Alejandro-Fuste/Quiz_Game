@@ -3,7 +3,7 @@
 
 ## Description 
 
-In many careers, people will probably be asked to complete an assessment. This application creates an assessment. This quiz game is a multiple-choice assessment that is timed. The quiz dynamically creates content with polished and responsive user interface. This application uses <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>, <strong>jQuery</strong> and the <strong>Web API</strong>.
+In many careers, people will probably be asked to complete an assessment. This application creates an assessment. This quiz game is a multiple-choice assessment that is timed. The quiz dynamically creates content with polished and responsive user interface. This application uses <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>, <strong>jQuery</strong> and the <strong>Web API</strong>. Click on this [link](https://alejandro-fuste.github.io/Quiz_Game/) to view the deployed site.
 
 ## User Story
 
