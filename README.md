@@ -1,5 +1,9 @@
 # Quiz Game (HTML, CSS, Javascript, Web API, jQuery) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+<table><tr><td>
+<img src="./images/quizGameGif.gif" alt="finished gif" style="border-radius:16px" width="838" height="380"/>
+</table></tr></td>
+
 
 ## Description 
 
