@@ -200,3 +200,15 @@ ol li {
 	color: white;
 	margin: 5px;
 }
+
+/* Adjust styling for cell phones */
+@media screen and (max-width: 480px) {
+	#highscore,
+	#timer {
+		font-size: 5vw;
+	}
+
+	.header {
+		height: 6%;
+	}
+}
