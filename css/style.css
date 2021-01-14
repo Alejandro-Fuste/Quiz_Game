@@ -212,7 +212,12 @@ ol li {
 		height: 6%;
 	}
 
-	p {
+	p,
+	.btn {
 		font-size: 3vw;
+	}
+
+	#button-addon1 {
+		margin-top: 15px;
 	}
 }
