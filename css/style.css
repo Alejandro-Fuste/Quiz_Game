@@ -211,4 +211,8 @@ ol li {
 	.header {
 		height: 6%;
 	}
+
+	p {
+		font-size: 3vw;
+	}
 }
