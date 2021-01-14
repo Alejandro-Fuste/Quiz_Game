@@ -28,7 +28,7 @@ $(document).ready(function() {
 
 	// Create object to styling for error messages
 	const errorStyles = {
-		display: 'inline',
+		display: 'flex',
 		border: '3px solid rgb(235, 78, 78)',
 		color: 'rgb(235, 78, 78)',
 		padding: '10px'
