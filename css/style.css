@@ -217,7 +217,8 @@ ol li {
 		font-size: 3vw;
 	}
 
-	#button-addon1 {
+	#button-addon1,
+	#button-addon3 {
 		margin-top: 15px;
 	}
 }
